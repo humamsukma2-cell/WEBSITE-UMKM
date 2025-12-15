@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MariCollection - Beranda</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <img src="image/MCO.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top me-2">
+        MariCollection.
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+          <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero-section text-center">
+    <video id="openingVideo" class="hero-video" autoplay muted loop playsinline>
+      <source src="video/opening.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content-wrapper">
+      <div class="row justify-content-center w-100">
+        <div class="col-lg-8">
+          <h1 class="display-4 fw-bold mb-3 mt-5 text-white">Redefine Your Style.</h1>
+          <p class="lead mb-4 text-white">Temukan koleksi musim panas terbaru yang dirancang untuk Anda yang berani
+            tampil beda.</p>
+          <a href="produk.html" class="btn btn-lg px-4 gap-3 btn-hero-custom">Belanja Sekarang</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="image/unggulan.png" class="img-fluid rounded shadow product-img-hover" alt="Lozyn Pants">
+        </div>
+
+        <div class="col-md-6">
+          <span class="badge bg-warning text-dark mb-2">Must Have This Month</span>
+          <h2 class="fw-bold">The Signature Lozyn Pants</h2>
+          <p class="text-muted">
+            Terbuat dari bahan semi-wol premium yang memberikan kenyamanan maksimal sambil tetap ringan. Potongan yang
+            longgar dirancang untuk gaya kasual atau semi-formal.
+          </p>
+
+          <ul class="list-group list-group-flush mb-4 bg-transparent">
+            <li class="list-group-item bg-transparent">✨ Tidak Mudah Kusut</li>
+            <li class="list-group-item bg-transparent">✨ Bahan Tidak Menerawang</li>
+          </ul>
+
+          <a href="#" class="btn btn-dark btn-lg btn-lihat-detail">Lihat Detail Produk</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal fade" id="detailModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Detail Produk</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Anda akan diarahkan ke halaman katalog untuk melihat varian warna Lozyn Pants.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <a href="produk.html" class="btn btn-primary">Lanjut ke Katalog</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-bold mb-3">MariCollection.</h5>
+          <p class="small text-white">Menyediakan berbagai model celana modern dan stylish untuk wanita masa kini.
+          </p>
+          <div class="d-flex gap-3">
+            <a href="https://instagram.com" class="text-white"><i class="fab fa-instagram"></i></a>
+            <a href="https://tiktok.com" class="text-white"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/6285142623429" class="text-white"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5 class="mb-3">Jelajahi</h5>
+          <ul class="list-unstyled text-white">
+            <li><a href="index.html" class="text-decoration-none text-white hover-white">Beranda</a></li>
+            <li><a href="produk.html" class="text-decoration-none text-white hover-white">Katalog Produk</a></li>
+            <li><a href="tentang.html" class="text-decoration-none text-white hover-white">Tentang Kami</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5 class="mb-3">Hubungi Kami</h5>
+          <ul class="list-unstyled text-white small">
+            <li class="mb-2">📍 Jl. Pantisari No. 4, Pekalongan</li>
+            <li class="mb-2">📞 +62 851-4262-3429</li>
+            <li class="mb-2">✉️ maricollection.id@gmail.com</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5 class="mb-3">Kunjungi Toko</h5>
+          <div class="ratio ratio-16x9">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.672338276686!2d109.6661!3d-6.9297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNTUnNDYuOSJTIDEwOcKwMzknNTguMCJF!5e0!3m2!1sen!2sid!4v1630000000000!5m2!1sen!2sid"
+              style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <hr class="border-secondary my-4">
+      <p class="text-center small text-white">© 2024 MariCollection. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="promoModal" tabindex="-1" aria-labelledby="promoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center">
+        <div class="modal-header border-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body p-4">
+          <div class="mb-3">
+            <i class="fas fa-gift fa-3x text-warning"></i>
+          </div>
+          <h2 class="fw-bold mb-3">Diskon Spesial 15%</h2>
+          <p class="text-muted mb-4">Selamat datang di MariCollection! Gunakan kode voucher di bawah ini untuk pembelian
+            pertama Anda.</p>
+          <div class="bg-light p-2 border border-secondary border-dashed rounded mb-4">
+            <h4 class="m-0 fw-bold letter-spacing-2" style="color: #c5a059;">MARINEW15</h4>
+          </div>
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Klaim Sekarang</button>
+            <button type="button" class="btn btn-link text-muted text-decoration-none btn-sm"
+              data-bs-dismiss="modal">Nanti Saja</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="js/index.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

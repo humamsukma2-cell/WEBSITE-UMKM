@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - MariCollection</title>
+    <link rel="icon" href="image/MCO.png" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <img src="image/MCO.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top me-2">
+                MariCollection.
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="galeri.html">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div style="margin-top: 70px;"></div>
+
+    <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="image/LZ DPN.jpg" class="d-block w-100" alt="Lozyn Collection">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4 fw-bold">Lozyn Series</h2>
+                    <p class="lead">Tampilan elegan untuk aktivitas harian Anda.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="image/O DPN.jpg" class="d-block w-100" alt="Oro Collection">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4 fw-bold">Oro Series</h2>
+                    <p class="lead">Kenyamanan maksimal dengan bahan premium.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="container py-5">
+
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Galeri Produk</h2>
+            <p class="text-muted">Klik kartu untuk melihat nama produk.</p>
+
+            <div class="btn-group mt-3" role="group">
+                <button type="button" class="btn btn-dark filter-btn" data-filter="all">Semua</button>
+                <button type="button" class="btn btn-outline-dark filter-btn" data-filter="foto">Foto</button>
+                <button type="button" class="btn btn-outline-dark filter-btn" data-filter="video">Video</button>
+            </div>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4 col-sm-6 gallery-item" data-category="foto">
+                <div class="card shadow-sm h-100">
+                    <img src="image/LZ DPN.jpg" class="gallery-img" alt="Lozyn - Tampilan Depan">
+                    <div class="card-body text-center bg-white">
+                        <p class="card-text fw-bold m-0 text-secondary">Klik Saya!</p>
+                        <button class="btn btn-sm btn-outline-warning mt-2 view-modal-btn">Preview Full</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 gallery-item" data-category="foto">
+                <div class="card shadow-sm h-100">
+                    <img src="image/LZ BLKG.jpg" class="gallery-img" alt="Lozyn - Tampilan Belakang">
+                    <div class="card-body text-center bg-white">
+                        <p class="card-text fw-bold m-0 text-secondary">Klik Saya!</p>
+                        <button class="btn btn-sm btn-outline-warning mt-2 view-modal-btn">Preview Full</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 gallery-item" data-category="foto">
+                <div class="card shadow-sm h-100">
+                    <img src="image/O DPN.jpg" class="gallery-img" alt="Oro - Tampilan Depan">
+                    <div class="card-body text-center bg-white">
+                        <p class="card-text fw-bold m-0 text-secondary">Klik Saya!</p>
+                        <button class="btn btn-sm btn-outline-warning mt-2 view-modal-btn">Preview Full</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 gallery-item" data-category="video">
+                <div class="card shadow-sm h-100">
+                    <video controls>
+                        <source src="video/oro.mov" type="video/mp4" alt="Video Produk Oro">
+                        Browser Anda tidak mendukung video.
+                    </video>
+                    <div class="card-body text-center bg-white">
+                        <p class="card-text fw-bold m-0 text-secondary">Klik Saya!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 gallery-item" data-category="foto">
+                <div class="card shadow-sm h-100">
+                    <img src="image/O BLKG.jpg" class="gallery-img" alt="Oro - Tampilan Belakang">
+                    <div class="card-body text-center bg-white">
+                        <p class="card-text fw-bold m-0 text-secondary">Klik Saya!</p>
+                        <button class="btn btn-sm btn-outline-warning mt-2 view-modal-btn">Preview Full</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 gallery-item" data-category="video">
+                <div class="card shadow-sm h-100">
+                    <video controls>
+                        <source src="video/lozyn.mp4" type="video/mp4" alt="Video Produk Lozyn">
+                        Browser Anda tidak mendukung video.
+                    </video>
+                    <div class="card-body text-center bg-white">
+                        <p class="card-text fw-bold m-0 text-secondary">Klik Saya!</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0 text-center bg-dark">
+                    <img src="" id="modalImage" class="img-fluid" alt="Preview">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-3">MariCollection.</h5>
+                    <p class="small text-white">Menyediakan berbagai model celana modern dan stylish untuk wanita masa
+                        kini.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="https://instagram.com" class="text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="https://tiktok.com" class="text-white"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/6285142623429" class="text-white"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-3">Jelajahi</h5>
+                    <ul class="list-unstyled text-white">
+                        <li><a href="index.html" class="text-decoration-none text-white hover-white">Beranda</a></li>
+                        <li><a href="produk.html" class="text-decoration-none text-white hover-white">Katalog Produk</a>
+                        </li>
+                        <li><a href="tentang.html" class="text-decoration-none text-white hover-white">Tentang Kami</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-3">Hubungi Kami</h5>
+                    <ul class="list-unstyled text-white small">
+                        <li class="mb-2">📍 Jl. Pantisari No. 4, Pekalongan</li>
+                        <li class="mb-2">📞 +62 851-4262-3429</li>
+                        <li class="mb-2">✉️ maricollection.id@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-3">Kunjungi Toko</h5>
+                    <div class="ratio ratio-16x9">
+                        <iframe
+                            src="https://maps.google.com/maps?width=600&height=400&hl=en&q=PABRIK%20KERUPUK%20LANGGENG%20BERKAH&t=&z=14&ie=UTF8&iwloc=B&output=embed"
+                            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <p class="text-center small text-white">© 2024 MariCollection. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/galeri.js"></script>
+
+</body>
+
+</html>

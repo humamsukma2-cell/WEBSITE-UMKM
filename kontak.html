@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontak - MariCollection</title>
+  <link rel="icon" href="image/MCO.png" type="image/x-icon">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-light">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <img src="image/MCO.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top me-2">
+        MariCollection.
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+          <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link active" href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="contact-header">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Hubungi Kami</h1>
+      <p class="lead text-white-50">Silakan pilih: Sekadar bertanya atau langsung memesan?</p>
+    </div>
+  </header>
+
+  <main class="container mb-5">
+    <div class="row g-5">
+
+      <div class="col-lg-6">
+        <div class="card form-card h-100">
+          <div class="card-header bg-white pt-3 pb-0 border-bottom-0">
+            <ul class="nav nav-tabs card-header-tabs justify-content-center" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="tanya-tab" data-bs-toggle="tab" data-bs-target="#tanya"
+                  type="button" role="tab"><i class="fas fa-comment-dots me-2"></i>Tanya Admin</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="order-tab" data-bs-toggle="tab" data-bs-target="#order" type="button"
+                  role="tab"><i class="fas fa-shopping-bag me-2"></i>Order Produk</button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card-body p-4">
+            <form id="FormKontak" action="#" method="post">
+              <div class="mb-3">
+                <label for="nama" class="form-label fw-bold">Nama:</label>
+                <input type="text" id="nama" name="nama" class="form-control" placeholder="Nama Lengkap" />
+                <span class="error" id="errorNama"></span>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label fw-bold">Email:</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="nama@gmail.com" />
+                <span class="error" id="errorEmail"></span>
+              </div>
+              <div class="mb-3">
+                <label for="hp" class="form-label fw-bold">Nomor HP:</label>
+                <input type="text" id="hp" name="hp" class="form-control" placeholder="08123456789" />
+                <span class="error" id="phoneError"></span>
+              </div>
+              <div class="mb-3">
+                <label for="pesan" class="form-label fw-bold">Pesan:</label>
+                <textarea id="pesan" name="pesan" rows="4" class="form-control"
+                  placeholder="Tulis pesan Anda..."></textarea>
+                <span class="error" id="errorPesan"></span>
+              </div>
+
+              <div id="sectionOrder" style="display:none;">
+                <h5 class="fw-bold mb-3 mt-4 text-warning border-bottom pb-2">Detail Pesanan</h5>
+                <div class="mb-3">
+                  <label for="jenis" class="form-label fw-bold">Jenis Celana:</label>
+                  <select id="jenis" name="jenis" class="form-select">
+                    <option value="">---Pilih Jenis Celana---</option>
+                    <option value="LozynPants">Lozyn Pants</option>
+                    <option value="OroPants">Oro Pants</option>
+                    <option value="Cutbray">Cutbray</option>
+                    <option value="InfoOnly" class="d-none">Hanya Bertanya</option>
+                  </select>
+                  <span class="error" id="errorJenis"></span>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="ukuran" class="form-label fw-bold">Ukuran:</label>
+                    <select id="ukuran" name="ukuran" class="form-select">
+                      <option value="">--Pilih--</option>
+                      <option value="M">M</option>
+                      <option value="L">L</option>
+                      <option value="XL">XL</option>
+                      <option value="-" class="d-none">-</option>
+                    </select>
+                    <span class="error" id="errorUkuran"></span>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="warna" class="form-label fw-bold">Warna:</label>
+                    <select id="warna" name="warna" class="form-select">
+                      <option value="">--Pilih--</option>
+                      <option value="Ivory">Ivory</option>
+                      <option value="-" class="d-none">-</option>
+                    </select>
+                    <span class="error" id="errorWarna"></span>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-bold">Metode Pembayaran:</label>
+                  <div class="d-flex gap-3">
+                    <div class="form-check">
+                      <input type="radio" name="payment" value="COD" class="form-check-input">
+                      <label class="form-check-label">COD</label>
+                    </div>
+                    <div class="form-check">
+                      <input type="radio" name="payment" value="Qris" class="form-check-input">
+                      <label class="form-check-label">Qris</label>
+                    </div>
+                    <div class="form-check">
+                      <input type="radio" name="payment" value="TransferBank" class="form-check-input">
+                      <label class="form-check-label">Transfer Bank</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-4 form-check">
+                <input type="checkbox" id="syarat" name="syarat" value="setuju" class="form-check-input">
+                <label for="syarat" class="form-check-label small text-secondary">Saya menyetujui Syarat &
+                  Ketentuan.</label>
+                <span class="error" id="errorSyarat"></span>
+              </div>
+              <div class="mb-4 form-check">
+                <input type="checkbox" id="langganan" name="langganan" value="ya" class="form-check-input">
+                <label for="langganan" class="form-check-label">Berlangganan Newsletter</label>
+              </div>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button type="button" id="clearBtn" class="btn btn-outline-danger me-md-2 btn-animasi">Clear</button>
+                <button type="submit" class="btn btn-dark btn-animasi" id="btnSubmit">Kirim Pesan</button>
+              </div>
+              <div id="feedback" class="feedback" style="display:none;"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card form-card h-100">
+          <div class="card-header bg-white text-center py-3 border-bottom-0">
+            <h4 class="m-0 text-dark fw-bold"><i class="fas fa-video me-2 text-warning"></i>DAFTAR WEBINAR</h4>
+          </div>
+          <div class="card-body p-4 bg-light rounded-bottom">
+            <form id="formWebinar" action="#" method="post">
+              <div class="mb-3">
+                <label for="namawebinar" class="form-label fw-bold">Nama:</label>
+                <input type="text" id="namawebinar" name="nama" class="form-control" placeholder="Nama Lengkap" />
+                <span class="error" id="errorNamawebinar"></span>
+              </div>
+              <div class="mb-3">
+                <label for="emailwebinar" class="form-label fw-bold">Email:</label>
+                <input type="email" id="emailwebinar" name="email" class="form-control" placeholder="nama@gmail.com" />
+                <span class="error" id="errorEmailwebinar"></span>
+              </div>
+              <div class="mb-3">
+                <label for="kategoriwebinar" class="form-label fw-bold">Kategori Pesan:</label>
+                <select id="kategoriwebinar" name="kategori" class="form-select">
+                  <option value="">-- Pilih Kategori --</option>
+                  <option value="info_daftar">Info Pendaftaran</option>
+                  <option value="kendala_teknis">Kendala Teknis</option>
+                  <option value="tanya_narasumber">Pertanyaan untuk Narasumber</option>
+                  <option value="request_topik">Request Topik Selanjutnya</option>
+                  <option value="sponsorship">Sponsorship & Kerjasama</option>
+                </select>
+                <span class="error" id="errorKategoriwebinar"></span>
+              </div>
+              <div class="mb-3">
+                <label for="pesanwebinar" class="form-label fw-bold">Pesan:</label>
+                <textarea id="pesanwebinar" name="pesan" rows="5" class="form-control"
+                  placeholder="Tulis pesan Anda..."></textarea>
+                <span class="error" id="errorPesanwebinar"></span>
+              </div>
+              <div class="mb-4 form-check">
+                <input type="checkbox" id="langgananwebinar" name="langganan" value="ya" class="form-check-input">
+                <label for="langgananwebinar" class="form-check-label">Terima Newsletter</label>
+              </div>
+              <div class="d-grid gap-2">
+                <button type="button" id="clearBtnwebinar" class="btn btn-outline-secondary btn-animasi">Clear</button>
+                <button type="submit" class="btn btn-warning fw-bold text-white btn-animasi">Daftar Sekarang</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <div class="modal fade" id="modalHasilWebinar" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title fw-bold"><i class="fas fa-check-circle me-2"></i>Pendaftaran Berhasil!</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <p class="text-muted mb-3">Terima kasih telah mendaftar. Berikut adalah detail data Anda:</p>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <strong>Nama:</strong> <span id="hasilNama"></span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <strong>Email:</strong> <span id="hasilEmail"></span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <strong>Kategori:</strong> <span id="hasilKategori"></span>
+            </li>
+          </ul>
+          <div class="alert alert-light mt-3 border">
+            <strong>Pesan Anda:</strong><br>
+            <span id="hasilPesan" class="fst-italic text-muted"></span>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark w-100" data-bs-dismiss="modal">Tutup</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-bold mb-3">MariCollection.</h5>
+          <p class="small text-white">Menyediakan berbagai model celana modern dan stylish untuk wanita masa kini.
+          </p>
+          <div class="d-flex gap-3">
+            <a href="https://instagram.com" class="text-white"><i class="fab fa-instagram"></i></a>
+            <a href="https://tiktok.com" class="text-white"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/6285142623429" class="text-white"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5 class="mb-3">Jelajahi</h5>
+          <ul class="list-unstyled text-white">
+            <li><a href="index.html" class="text-decoration-none text-white hover-white">Beranda</a></li>
+            <li><a href="produk.html" class="text-decoration-none text-white hover-white">Katalog Produk</a></li>
+            <li><a href="tentang.html" class="text-decoration-none text-white hover-white">Tentang Kami</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5 class="mb-3">Hubungi Kami</h5>
+          <ul class="list-unstyled text-white small">
+            <li class="mb-2">📍 Jl. Pantisari No. 4, Pekalongan</li>
+            <li class="mb-2">📞 +62 851-4262-3429</li>
+            <li class="mb-2">✉️ maricollection.id@gmail.com</li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5 class="mb-3">Kunjungi Toko</h5>
+          <div class="ratio ratio-16x9">
+            <iframe
+              src="https://maps.google.com/maps?width=600&height=400&hl=en&q=PABRIK%20KERUPUK%20LANGGENG%20BERKAH&t=&z=14&ie=UTF8&iwloc=B&output=embed"
+              style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <p class="text-center small text-white">© 2024 MariCollection. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("FormKontak");
+      const nama = document.getElementById("nama");
+      const email = document.getElementById("email");
+      const pesan = document.getElementById("pesan");
+      const jenis = document.getElementById("jenis");
+      const ukuran = document.getElementById("ukuran");
+      const warna = document.getElementById("warna");
+      const phoneInput = document.getElementById("hp");
+      const feedback = document.getElementById("feedback");
+      const clearBtn = document.getElementById("clearBtn");
+
+      const phoneError = document.getElementById("phoneError");
+      const errorNama = document.getElementById("errorNama");
+      const errorEmail = document.getElementById("errorEmail");
+      const errorPesan = document.getElementById("errorPesan");
+      const errorjenis = document.getElementById("errorJenis");
+      const errorukuran = document.getElementById("errorUkuran");
+      const errorWarna = document.getElementById("errorWarna");
+      const errorSyarat = document.getElementById("errorSyarat");
+
+      const showMsg = (msg, type, duration = 3000) => {
+        feedback.textContent = msg;
+        feedback.className = `feedback ${type}`;
+        feedback.style.display = "block";
+        setTimeout(() => feedback.style.display = "none", duration);
+      };
+
+      // --- VALIDASI SUBMIT FORM KONTAK ---
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        let valid = true;
+
+        if (nama.value.trim() === "") {
+          errorNama.textContent = "Nama wajib diisi.";
+          valid = false;
+        } else {
+          errorNama.textContent = "";
+        }
+
+        const emailPattern = /^[^ ]+@gmail\.com$/i;
+        if (!emailPattern.test(email.value)) {
+          errorEmail.textContent = "Email harus @gmail.com.";
+          valid = false;
+        } else {
+          errorEmail.textContent = "";
+        }
+
+        if (pesan.value.trim().length < 10) {
+          errorPesan.textContent = "Pesan minimal 10 karakter.";
+          valid = false;
+        } else {
+          errorPesan.textContent = "";
+        }
+
+        if (!jenis.value) {
+          errorjenis.textContent = "Pilih jenis celana.";
+          valid = false;
+        } else {
+          errorjenis.textContent = "";
+        }
+
+        if (!ukuran.value) {
+          errorukuran.textContent = "Pilih ukuran celana.";
+          valid = false;
+        } else {
+          errorukuran.textContent = "";
+        }
+
+        if (!warna.value) {
+          errorWarna.textContent = "Pilih warna celana.";
+          valid = false;
+        } else {
+          errorWarna.textContent = "";
+        }
+
+        const syarat = document.getElementById("syarat");
+        if (!syarat.checked) {
+          errorSyarat.textContent = "Anda harus menyetujui syarat.";
+          valid = false;
+        } else {
+          errorSyarat.textContent = "";
+        }
+
+        if (valid) {
+          showMsg("Terima kasih! Pesan Anda telah berhasil dikirim.", "success", 4000);
+          form.reset();
+        }
+      });
+
+      // --- VALIDASI REALTIME FORM KONTAK ---
+      nama.addEventListener("input", function () {
+        errorNama.textContent = this.value.trim() === "" ? "Nama wajib diisi." : "";
+      });
+
+      email.addEventListener("input", function () {
+        const emailPattern = /^[^ ]+@gmail\.com$/i;
+        errorEmail.textContent = !emailPattern.test(email.value) ? "Email harus @gmail.com dan format benar." : "";
+      });
+
+      pesan.addEventListener("input", function () {
+        errorPesan.textContent = this.value.trim().length < 10 ? "Pesan minimal 10 karakter." : "";
+      });
+
+      phoneInput.addEventListener("input", () => {
+        const onlyNumbers = /^[0-9+]*$/;
+        phoneError.textContent = !onlyNumbers.test(phoneInput.value) ? "Nomor HP hanya boleh angka." : "";
+      });
+
+      jenis.addEventListener("change", function () {
+        errorjenis.textContent = this.value === "" ? "Pilih jenis celana." : "";
+      });
+
+      ukuran.addEventListener("change", function () {
+        errorukuran.textContent = this.value === "" ? "Pilih ukuran celana." : "";
+      });
+
+      warna.addEventListener("change", function () {
+        errorWarna.textContent = this.value === "" ? "Pilih warna celana." : "";
+      });
+
+      document.getElementById("langganan").addEventListener("change", function () {
+        if (this.checked) {
+          alert("Terima kasih telah berlangganan newsletter!");
+        }
+      });
+
+      clearBtn.addEventListener("click", () => {
+        if (confirm("Apakah Anda yakin ingin menghapus semua data?")) {
+          form.reset();
+          showMsg("Semua data berhasil dihapus.", "info");
+        } else {
+          showMsg("❌ Data tidak jadi dihapus.", "warning");
+        }
+      });
+    });
+
+    // --- VALIDASI FORM WEBINAR ---
+    const formWebinar = document.getElementById("formWebinar");
+
+    formWebinar.addEventListener("submit", function (event) {
+      let valid = true;
+
+      const namawebinar = document.getElementById("namawebinar");
+      const errorNamawebinar = document.getElementById("errorNamawebinar");
+      if (namawebinar.value.trim() === "") {
+        errorNamawebinar.textContent = "Nama wajib diisi.";
+        valid = false;
+      } else {
+        errorNamawebinar.textContent = "";
+      }
+
+      const emailwebinar = document.getElementById("emailwebinar");
+      const errorEmailwebinar = document.getElementById("errorEmailwebinar");
+      const emailPattern = /^[^ ]+@gmail\.com$/i;
+      if (!emailPattern.test(emailwebinar.value)) {
+        errorEmailwebinar.textContent = "Email harus @gmail.com dan format benar.";
+        valid = false;
+      } else {
+        errorEmailwebinar.textContent = "";
+      }
+
+      const kategoriwebinar = document.getElementById("kategoriwebinar");
+      const errorKategoriwebinar = document.getElementById("errorKategoriwebinar");
+      if (kategoriwebinar.value === "") {
+        errorKategoriwebinar.textContent = "Pilih salah satu kategori.";
+        valid = false;
+      } else {
+        errorKategoriwebinar.textContent = "";
+      }
+
+      const pesanwebinar = document.getElementById("pesanwebinar");
+      const errorPesanwebinar = document.getElementById("errorPesanwebinar");
+
+      // PERBAIKAN: Validasi menggunakan pesanwebinar.value
+      if (pesanwebinar.value.trim().length < 10) {
+        errorPesanwebinar.textContent = "Pesan minimal 10 karakter.";
+        valid = false;
+      } else {
+        errorPesanwebinar.textContent = "";
+      }
+
+      if (!valid) {
+        event.preventDefault();
+      } else {
+        event.preventDefault();
+
+        // Ambil Data untuk Modal
+        const valNama = namawebinar.value;
+        const valEmail = emailwebinar.value;
+        const valKategori = kategoriwebinar.options[kategoriwebinar.selectedIndex].text;
+        const valPesan = pesanwebinar.value;
+
+        // Masukkan ke Modal
+        $("#hasilNama").text(valNama);
+        $("#hasilEmail").text(valEmail);
+        $("#hasilKategori").text(valKategori);
+        $("#hasilPesan").text(valPesan);
+
+        // Tampilkan Modal
+        $("#modalHasilWebinar").modal('show');
+
+        // Reset form
+        formWebinar.reset();
+      }
+    });
+
+    // --- VALIDASI REALTIME WEBINAR ---
+    document.getElementById("namawebinar").addEventListener("input", function () {
+      const errorNamawebinar = document.getElementById("errorNamawebinar");
+      if (this.value.trim() === "") {
+        errorNamawebinar.textContent = "Nama wajib diisi.";
+      } else {
+        errorNamawebinar.textContent = "";
+      }
+    });
+
+    document.getElementById("pesanwebinar").addEventListener("input", function () {
+      const errorPesanwebinar = document.getElementById("errorPesanwebinar");
+      if (this.value.trim().length < 10) {
+        errorPesanwebinar.textContent = "Pesan minimal 10 karakter.";
+      } else {
+        errorPesanwebinar.textContent = "";
+      }
+    });
+
+    document.getElementById("emailwebinar").addEventListener("input", function () {
+      const errorEmailwebinar = document.getElementById("errorEmailwebinar");
+      const gmailRegex = /^[^ ]+@gmail\.com$/i;
+      if (!gmailRegex.test(this.value.trim())) {
+        errorEmailwebinar.textContent = "Email harus @gmail.com dan format benar.";
+      } else {
+        errorEmailwebinar.textContent = "";
+      }
+    });
+
+    document.getElementById("langgananwebinar").addEventListener("change", function () {
+      if (this.checked) {
+        alert("Terima kasih telah berlangganan newsletter!");
+      }
+    });
+
+    // --- TAMBAHAN: LOGIKA TOMBOL CLEAR FORM WEBINAR ---
+    const clearBtnWebinar = document.getElementById("clearBtnwebinar");
+
+    clearBtnWebinar.addEventListener("click", () => {
+      if (confirm("Apakah Anda yakin ingin menghapus data formulir Webinar?")) {
+        // 1. Reset inputan form
+        document.getElementById("formWebinar").reset();
+
+        // 2. Bersihkan pesan error merah (jika ada)
+        document.getElementById("errorNamawebinar").textContent = "";
+        document.getElementById("errorEmailwebinar").textContent = "";
+        document.getElementById("errorKategoriwebinar").textContent = "";
+        document.getElementById("errorPesanwebinar").textContent = "";
+
+        // 3. Tampilkan pesan sukses (menggunakan alert standar agar simpel)
+        alert("Data formulir webinar berhasil dihapus.");
+      }
+    });
+  </script>
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
