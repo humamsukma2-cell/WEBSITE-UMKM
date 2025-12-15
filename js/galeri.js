@@ -48,7 +48,7 @@ if (document.querySelector('.gallery-item')) {
     initGaleri();
 
 
-    // --- 2. JQUERY EVENTS (Filter, Zoom, Modal) ---
+    // --- 1. JQUERY EVENTS (Filter, Zoom, Modal) ---
     $(document).ready(function () {
 
         // Event 1: Filter Kategori

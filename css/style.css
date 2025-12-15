@@ -83,13 +83,6 @@
   border-color: #111111 !important;
 }
 
-/* Bingkai Foto Founder */
-.founder-img-frame {
-  border: 5px solid #111111;
-  padding: 0px;
-  background-color: white;
-}
-
 /* Header Halaman Gelap */
 .page-header {
   background-color: #1a1a1a;

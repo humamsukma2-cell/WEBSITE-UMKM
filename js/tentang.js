@@ -10,7 +10,6 @@ $(".value-card").hover(
 
 // --- HALAMAN TENTANG: KLIK FOTO FOUNDER ---
 $("#founderImg").click(function () {
-    // Efek visual: Toggle border (menggunakan class Bootstrap warning sebagai contoh)
     $(this).toggleClass("border border-black border-5");
     alert("Halo! Terima kasih sudah mengunjungi MariCollection.");
 });
