@@ -1,22 +1,9 @@
 // =========================================
 // 5. LOGIKA HALAMAN KONTAK (kontak.html)
 // =========================================
+// ... kode lain ...
+
 if ($("#FormKontak").length) {
-    // Tab Switch Logic
-    $("#sectionOrder").slideUp();
-    $("#jenis").val("InfoOnly"); $("#ukuran").val("-"); $("#warna").val("-");
-
-    $("#tanya-tab").click(function () {
-        $("#sectionOrder").slideUp();
-        $("#btnSubmit").text("Kirim Pesan");
-        $("#jenis").val("InfoOnly"); $("#ukuran").val("-"); $("#warna").val("-");
-    });
-
-    $("#order-tab").click(function () {
-        $("#sectionOrder").slideDown();
-        $("#btnSubmit").text("Pesan Sekarang");
-        $("#jenis").val(""); $("#ukuran").val(""); $("#warna").val("");
-    });
 
     // Efek Input Focus
     $("input.form-control, textarea.form-control").focus(function () {
